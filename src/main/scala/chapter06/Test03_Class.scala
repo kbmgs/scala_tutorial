@@ -1,0 +1,35 @@
+package chapter06
+
+import scala.beans.BeanProperty
+
+/**
+ * @title: Test03_Class
+ * @projectName scala_tutorial
+ * @description: TODO
+ * @author kbmgs
+ * @date 2022/3/3 16:58
+ */
+object Test03_Class {
+  def main(args: Array[String]): Unit = {
+
+    // 创建一个对象
+    val student = new Student()
+    //    student.name  //error,不能访问private属性
+    println(student.age)
+    println(student.sex)
+    student.sex = "female"
+
+  }
+
+}
+
+// 定义一个类
+class Student {
+  // 定义属性
+  private var name: String = "alice"
+  @BeanProperty
+  var age: Int = _
+  var sex: String = _
+
+}
+
