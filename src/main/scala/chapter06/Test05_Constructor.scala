@@ -9,7 +9,14 @@ package chapter06
  */
 object Test05_Constructor {
   def main(args: Array[String]): Unit = {
-
+    //创建对象
+    val student1 = new Student1
+    // 调用一般方法
+    student1.Student1()
+    println("*********************")
+    val student2 = new Student1("alice")
+    println("*********************")
+    val student3 = new Student1("bob",30)
   }
 }
 
@@ -38,8 +45,9 @@ class Student1() {
     println(s"name:$name age:$age")
   }
 
+  //创建Student1类中的同名方法(一般的方法)
   def Student1(): Unit = {
-
+    println("一般方法被调用")
   }
 
 }
