@@ -1,5 +1,9 @@
 package chapter06
 
+/**
+ * java中属性静态绑定，根据变量的引用类型确定，方法是动态绑定。
+ * 但scala中属性和方法都是动态绑定。
+ */
 //scala中的动态绑定
 object Test08_DynamicBind {
   def main(args: Array[String]): Unit = {
