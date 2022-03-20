@@ -74,7 +74,7 @@ object Test02_ArrayBuffer {
     //5.可变数组转换为不可变数组
     println("******************************")
     val arr: ArrayBuffer[Int] = ArrayBuffer(23, 56, 98)
-    val newArr: Array[Int] = arr.toArray
+    val newArr: Array[Int] = arr.toArray  //可变数组和不可变数组可以调用方法互相转换
     println(newArr.mkString(", "))
     println(arr) //ArrayBuffer(23, 56, 98)
 

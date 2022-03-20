@@ -6,6 +6,7 @@ package chapter07
 object Test03_MulArray {
   def main(args: Array[String]): Unit = {
     //1.创建二维数组
+    //使用Array.ofDim[Type](firstDim, secondDim, ...)方法
     val array: Array[Array[Int]] = Array.ofDim[Int](2, 3) //2行3列的二维数组，泛型指定为Int，数组元素为Int类型
 
     //2.访问元素

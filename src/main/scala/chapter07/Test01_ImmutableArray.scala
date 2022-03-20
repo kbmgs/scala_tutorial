@@ -7,7 +7,7 @@ object Test01_ImmutableArray {
   def main(args: Array[String]): Unit = {
     //1.创建数组
     val arr: Array[Int] = new Array[Int](5) //[]是泛型，指定数组的元素类型
-    //另一种创建的方式
+    //另一种创建的方式：伴生对象
     val arr2 = Array(12, 37, 42, 58, 97)
     //    val arr3 = Array.apply(12, 37, 42, 58, 97) //以上等同于使用Array.apply方法，省略apply
 
