@@ -20,5 +20,10 @@ object Test15_HighLevelFunction_Reduce {
     println(list2.reduceLeft((_ - _))) //-24 从左往右一个一个减
     println(list2.reduceRight((_ - _))) //6 = 3-(4-(5-(8-10)) = 3-4+5-8+10 ，具体逻辑看源码---op(head, tail.reduceRight(op))
 
+    //2.fold
+    println("************************")
+    println(list.fold(5)(_ * _)) //5 * 1 * 2 * 3 * 4
+    println(list.foldLeft(10)(_ - _)) //10 - 1 - 2 - 3 - 4
+    println(list2.foldRight(11)(_ - _)) //3-(4-(5-(8-(10 -11))))  = -5
   }
 }
