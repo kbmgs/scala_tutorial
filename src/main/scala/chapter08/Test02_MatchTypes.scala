@@ -86,12 +86,34 @@ object Test02_MatchTypes {
 
       val list1 = List(1, 2, 5, 7, 24)
       val list = List(24)
-      list match {
+      list1 match {
         //
-        case first :: second :: rest => println(s"first:$first, second:$second, rest:$rest")
+        case first :: second :: rest2 => println(s"first:$first, second:$second, rest:$rest2")
         case _ => println("something else")
 
       }
+
+      //5.匹配元组
+      println("***********************")
+
+      for (tuple <- List(
+        (0, 1),
+        (0, 0),
+        (0, 1, 0),
+        (0, 1, 1),
+        (1, 23, 56),
+        ("hello", true, 0.5)
+      )) {
+        val result = tuple match {
+          case (a, b) => "" + a + ", " + b //二元组
+          case (0, _) => "(0, _)" //第一个元素是0的二元组
+          case (a, 1, _) => "(a, 1, _)" + a //三个元素，第二个元素是1
+          case (x, y, z) => "(x, y, z)" + x + " " + y + " " + z + " " //三元素
+          case _ => "something else" //默认case
+        }
+        println(result)
+      }
+
     }
   }
 }
